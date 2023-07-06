@@ -15,4 +15,13 @@ Docker uses a client-server (C/S) architecture pattern and uses a remote API to 
 | container | object          |
 | image     | class           |
 
-![image-20230706165743863](https://raw.githubusercontent.com/MarcLan/pic/main/image-20230706165743863.png)
+![image-20230706164307479](https://raw.githubusercontent.com/MarcLan/pic/main/image-20230706164307479.png)
+
+| Concept         | Description                                                  |
+| :-------------- | :----------------------------------------------------------- |
+| Images          | A Docker image is a template for creating Docker containers, such as an Ubuntu system. |
+| Container       | A container is an application or a group of applications that run independently, and is the entity of the image runtime. |
+| Client          | The Docker client communicates with the Docker daemon through the command line or other tools using the Docker SDK (https://docs.docker.com/develop/sdk/). |
+| Host            | A physical or virtual machine used to execute the Docker daemon and containers. |
+| Docker Registry | The Docker warehouse is used to store images, which can be understood as a code warehouse in code control. Docker Hub (https://hub.docker.com) provides a huge collection of images for use. A Docker Registry can contain multiple warehouses (Repository); each warehouse can contain multiple tags (Tag); each tag corresponds to a mirror. Usually, a warehouse will contain images of different versions of the same software, and tags are often used to correspond to each version of the software. We can use the format of <warehouse name>:<label> to specify which version of the software is the mirror image. If no tag is given, latest will be used as the default tag. |
+| Docker Machine  | Docker Machine is a command-line tool that simplifies Docker installation. Docker can be installed on corresponding platforms through a simple command line, such as VirtualBox, Digital Ocean, and Microsoft Azure. |
