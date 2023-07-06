@@ -272,11 +272,244 @@ The plus sign `+` is the list concatenation operator and the asterisk `*` is the
 list = [ 'abcd', 786 , 2.23, 'runoob', 70.2 ]
 tinylist = [123, 'runoob']
 
-print (list)            # 输出完整列表
-print (list[0])         # 输出列表第一个元素
-print (list[1:3])       # 从第二个开始输出到第三个元素
-print (list[2:])        # 输出从第三个元素开始的所有元素
-print (tinylist * 2)    # 输出两次列表
-print (list + tinylist) # 连接列表
+print (list)            
+print (list[0])         
+print (list[1:3])       
+print (list[2:])        
+print (tinylist * 2)    
+print (list + tinylist) 
 ```
 
+Unlike Python strings, elements in lists can be changed
+
+```PYTHON
+>>> a = [1, 2, 3, 4, 5, 6]
+>>> a[0] = 9
+>>> a[2:5] = [13, 14, 15]
+>>> a
+[9, 2, 13, 14, 15, 6]
+>>> a[2:5] = []   
+>>> a
+[9, 2, 6]
+```
+
+List has many built-in methods, such as append(), pop(), etc.
+
+## Notice:
+
+- List is written between square brackets, and elements are separated by commas.
+
+- Like string, list can be indexed and sliced.
+- Lists can be concatenated using the + operator.
+- The elements in the List can be changed.
+
+Python list truncation can receive the third parameter, which is the step size of the truncation. The following example is at the index 1 to index 4 and set the step size to 2 (one position apart) to truncate the string:
+
+If the third parameter is negative, it means reverse reading, the following example is used to reverse the string:
+
+```python
+def reverseWords(input):
+     
+    # Separate the string delimiter by spaces to separate each word into a list
+    inputWords = input.split(" ")
+ 
+    # flip string
+    # list of assumptions list = [1,2,3,4],  
+    # list[0]=1, list[1]=2 ，而 -1 表示最后一个元素 list[-1]=4 ( the same as list[3]=4 )
+    # inputWords[-1::-1] has three parameters
+    # The first parameter -1 means the last element
+    # The second parameter is empty, indicating to move to the end of the list
+    # The third parameter is the step size, -1 means reverse
+    inputWords=inputWords[-1::-1]
+ 
+    # Reassemble the string
+    output = ' '.join(inputWords)
+     
+    return output
+ 
+if __name__ == "__main__":
+    input = 'I like runoob'
+    rw = reverseWords(input)
+    print(rw)
+```
+
+
+
+# Tuple
+
+A tuple is similar to a list, except that the elements of a tuple cannot be modified. Tuples are written in parentheses (), and elements are separated by commas. The element types in the tuple can also be different:
+
+```python
+#!/usr/bin/python3
+
+tuple = ( 'abcd', 786 , 2.23, 'runoob', 70.2  )
+tinytuple = (123, 'runoob')
+
+print (tuple)             # output the full tuple
+print (tuple[0])          # output the first element of the tuple
+print (tuple[1:3])        # The output starts from the second element to the third element
+print (tuple[2:])         # output all elements starting from the third element
+print (tinytuple * 2)     # Output tuple twice
+print (tuple + tinytuple) # connection tuple
+
+('abcd', 786, 2.23, 'runoob', 70.2)
+abcd
+(786, 2.23)
+(2.23, 'runoob', 70.2)
+(123, 'runoob', 123, 'runoob')
+('abcd', 786, 2.23, 'runoob', 70.2, 123, 'runoob')
+```
+
+In fact, you can think of strings as a special kind of tuple
+
+```python
+>>> tup = (1, 2, 3, 4, 5, 6)
+>>> print(tup[0])
+1
+>>> print(tup[1:5])
+(2, 3, 4, 5)
+>>> tup[0] = 11  # Operations that modify tuple elements are illegal
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>>
+```
+
+Although the elements of a tuple are immutable, it can contain mutable objects, such as lists. Constructing tuples with 0 or 1 elements is special, so there are some additional syntax rules:
+
+```python
+tup1 = ()    # empty tuple
+tup2 = (20,) # An element, you need to add a comma after the element
+```
+
+string, list and tuple all belong to sequence.
+
+## Notice:
+
+- Like strings, elements of tuples cannot be modified.
+- Tuples can also be indexed and sliced, in the same way.
+
+- Note the special syntax rules for constructing tuples containing 0 or 1 elements.
+- Tuples can also be concatenated using the + operator.
+
+
+
+# Set
+
+A set is composed of one or several wholes of various shapes and sizes, and the things or objects that constitute a set are called elements or members. The basic functionality is to perform membership tests and remove duplicate elements.
+
+To create an empty set you must use `set()` instead of `{ }`, because `{ }` is used to create an empty dictionary.
+
+```python
+sites = {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu'}
+print(sites)   # Output set, duplicate elements are automatically removed
+
+# member test
+if 'Runoob' in sites :
+    print('Runoob 在集合中')
+else :
+    print('Runoob 不在集合中')
+
+
+# set can perform set operations
+a = set('abracadabra')
+b = set('alacazam')
+
+print(a)
+
+print(a - b)     # difference of a and b
+
+print(a | b)     # the union of a and b
+
+print(a & b)     # the intersection of a and b
+
+print(a ^ b)     # elements in a and b that are not present at the same time
+```
+
+
+
+# Dictionary
+
+A dictionary is a mapping type, and a dictionary is marked with `{ }`,which is an unordered collection of key : value. Keys must use immutable types. Within the same dictionary, keys must be unique.
+
+```python
+dict = {}
+dict['one'] = "1"
+dict[2]     = "2"
+
+tinydict = {'name':'runoob', 'code':1,'site':'www.runoob.com'}
+
+print (dict['one'])       
+print (dict[2])           
+print (tinydict)          
+print (tinydict.keys())   
+print (tinydict.values()) 
+
+1
+2
+{'name': 'runoob', 'code': 1, 'site': 'www.runoob.com'}
+dict_keys(['name', 'code', 'site'])
+dict_values(['runoob', 1, 'www.runoob.com'])
+```
+
+The dictionary type also has some built-in functions, such as clear(), keys(), values(), etc.
+
+## Notice:
+
+- A dictionary is a mapping type whose elements are key-value pairs.
+- The keys of the dictionary must be immutable and cannot be repeated.
+- To create an empty dictionary use { }.
+
+
+
+# Bytes
+
+In Python3, the bytes type represents an immutable binary sequence (byte sequence).
+
+The bytes type is usually used to deal with binary data, such as image files, audio files, video files, and so on. In network programming, the bytes type is also often used to transmit binary data.
+
+```python
+x = bytes('hello', encoding = 'utf-8')
+```
+
+Similar to the string type, the bytes type also supports many operations and methods, such as slicing, concatenating, searching, replacing, and so on. At the same time, since the bytes type is immutable, a new bytes object needs to be created when performing a modification operation. For example:
+
+```python
+x = b"hello"
+y = x[1:3] # slice operation, get b"el"
+z = x + b"world" # Splicing operation, get b"helloworld"
+```
+
+It should be noted that the elements in the bytes type are integer values, so the corresponding integer values need to be used when performing comparison operations. For example:
+
+```python
+x = b"hello"
+if x[0] == ord("h")
+	print("The first element is 'h'")
+```
+
+where the `ord()` function is used to convert a character to its corresponding integer value.
+
+
+
+# Python data type conversion
+
+Sometimes, we need to convert the built-in data type, data type conversion, you only need to use the data type as the function name
+
+| Function                                                     | Description                                                  |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [int(x [,base\])                                             | Convert x to an integer                                      |
+| [float(x)](https://www.runoob.com/python3/python-func-float.html) | Convert x to a float                                         |
+| [complex(real [,imag\])](https://www.runoob.com/python3/python-func-complex.html) | Create a plural                                              |
+| [str(x)](https://www.runoob.com/python3/python-func-str.html) | Convert the object x to a string                             |
+| [repr(x)](https://www.runoob.com/python3/python-func-repr.html) | Convert the object x to an expression string                 |
+| [eval(str)](https://www.runoob.com/python3/python-func-eval.html) | Evaluates a valid Python expression in a string and returns an object |
+| [tuple(s)](https://www.runoob.com/python3/python3-func-tuple.html) | Convert the sequence s to a tuple                            |
+| [list(s)](https://www.runoob.com/python3/python3-att-list-list.html) | Convert the sequence s to a list                             |
+| [set(s)](https://www.runoob.com/python3/python-func-set.html) | Convert to a mutable collection                              |
+| [dict(d)](https://www.runoob.com/python3/python-func-dict.html) | Create a dictionary. d must be a sequence of (key, value) tuples. |
+| [frozenset(s)](https://www.runoob.com/python3/python-func-frozenset.html) | Convert to immutable collection                              |
+| [chr(x)](https://www.runoob.com/python3/python-func-chr.html) | Convert an integer to a character                            |
+| [ord(x)](https://www.runoob.com/python3/python-func-ord.html) | Converts a character to its integer value                    |
+| [hex(x)](https://www.runoob.com/python3/python-func-hex.html) | Convert an integer to a hexadecimal string                   |
+| [oct(x)](https://www.runoob.com/python3/python-func-oct.html) | Converts an integer to an octal string                       |
