@@ -1,4 +1,4 @@
-# Basic Data Type
+# Python Basic Data Type
 
 Variables in Python do not need to be declared. Each variable must be assigned a value before use, and the variable will not be created until the variable is assigned. In Python, a variable is just a variable, it doesn't have a type, what we mean by "type" is the type of object in memory that the variable refers to.
 
@@ -35,6 +35,8 @@ Multiple variables can be specified for multiple objects
 ```py
 a, b, c = 1, 2, "runoob"
 ```
+
+
 
 ## Standard Data Type
 
@@ -158,6 +160,72 @@ Python also supports complex numbers. A complex number consists of a real part a
 
 
 
+Math Function
+
+| function                                                     | return value (description)                                   |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [abs(x)](https://www.runoob.com/python3/python3-func-number-abs.html) | Returns the absolute value of a number, such as abs(-10) returns 10 |
+| [ceil(x)](https://www.runoob.com/python3/python3-func-number-ceil.html) | Returns the upper integer of the number, such as math.ceil(4.1) returns 5 |
+| cmp(x, y)                                                    | Returns -1 if x < y, 0 if x == y, and 1 if x > y. **Deprecated in Python 3, use (x>y)-(x<y) instead** . |
+| [exp(x)](https://www.runoob.com/python3/python3-func-number-exp.html) | Return e to the power of x (e x ), such as math.exp(1) returns 2.718281828459045 |
+| [fabs(x)](https://www.runoob.com/python3/python3-func-number-fabs.html) | Returns the absolute value of a number as a floating point number, such as math.fabs(-10) returns 10.0 |
+| [floor(x)](https://www.runoob.com/python3/python3-func-number-floor.html) | Returns the rounded integer of a number, such as math.floor(4.9) returns 4 |
+| [log(x)](https://www.runoob.com/python3/python3-func-number-log.html) | Such as math.log(math.e) returns 1.0, math.log(100,10) returns 2.0 |
+| [log10(x)](https://www.runoob.com/python3/python3-func-number-log10.html) | Returns the logarithm of x in base 10, such as math.log10(100) returns 2.0 |
+| [max(x1, x2,...)](https://www.runoob.com/python3/python3-func-number-max.html) | Returns the maximum value of the given argument, which can be a sequence. |
+| [min(x1, x2,...)](https://www.runoob.com/python3/python3-func-number-min.html) | Returns the minimum value of the given argument, which can be a sequence. |
+| [modf(x)](https://www.runoob.com/python3/python3-func-number-modf.html) | Returns the integer part and fractional part of x. The numerical signs of the two parts are the same as x, and the integer part is represented by floating point. |
+| [pow(x, y)](https://www.runoob.com/python3/python3-func-number-pow.html) | The value after x**y operation.                              |
+| [round(x[,n\])](https://www.runoob.com/python3/python3-func-number-round.html) | Returns the rounded value of the floating-point number x, or, if n is given, the number of digits rounded to the decimal point.**In fact, it is accurate to say that the reserved value will be reserved to the end closer to the previous one.** |
+| [sqrt(x)](https://www.runoob.com/python3/python3-func-number-sqrt.html) | Returns the square root of the number x.                     |
+
+## random number function
+
+Random numbers can be used in mathematics, games, security and other fields, and are often embedded in algorithms to improve algorithm efficiency and program security.
+
+Python includes the following commonly used random number functions:
+
+| function                                                     | describe                                                     |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [choice(seq)](https://www.runoob.com/python3/python3-func-number-choice.html) | Randomly pick an element from the elements of the sequence, such as random.choice(range(10)), randomly pick an integer from 0 to 9. |
+| [randrange ([start,\] stop [, step])](https://www.runoob.com/python3/python3-func-number-randrange.html) | Obtain a random number from the set within the specified range and incremented by the specified radix, the default value of the radix is 1 |
+| [random()](https://www.runoob.com/python3/python3-func-number-random.html) | Randomly generate the next real number, which is in the range [0,1). |
+| [seed([x\])](https://www.runoob.com/python3/python3-func-number-seed.html) | Change the seed of the random number generator. If you don't understand its principle, you don't have to set the seed specifically, Python will help you choose the seed. |
+| [shuffle(lst)](https://www.runoob.com/python3/python3-func-number-shuffle.html) | randomize all elements of a sequence                         |
+| [uniform(x, y)](https://www.runoob.com/python3/python3-func-number-uniform.html) | Randomly generate the next real number in the range [x,y].   |
+
+
+
+## Trigonometric functions
+
+Python includes the following trigonometric functions:
+
+| function                                                     | describe                                                     |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [acos(x)](https://www.runoob.com/python3/python3-func-number-acos.html) | Returns the arccosine radian value of x.                     |
+| [asin(x)](https://www.runoob.com/python3/python3-func-number-asin.html) | Returns the arcsine of x in radians.                         |
+| [atan(x)](https://www.runoob.com/python3/python3-func-number-atan.html) | Returns the arctangent of x in radians.                      |
+| [atan2(y, x)](https://www.runoob.com/python3/python3-func-number-atan2.html) | Returns the arctangent of the given X and Y coordinates.     |
+| [cos(x)](https://www.runoob.com/python3/python3-func-number-cos.html) | Returns the cosine of x in radians.                          |
+| [hypot(x, y)](https://www.runoob.com/python3/python3-func-number-hypot.html) | Returns the Euclidean norm sqrt(x*x + y*y).                  |
+| [sin(x)](https://www.runoob.com/python3/python3-func-number-sin.html) | Returns the sine of x in radians.                            |
+| [tan(x)](https://www.runoob.com/python3/python3-func-number-tan.html) | Returns the tangent of x in radians.                         |
+| [degrees(x)](https://www.runoob.com/python3/python3-func-number-degrees.html) | Convert radians to angles, such as degrees(math.pi/2), return 90.0 |
+| [radians(x)](https://www.runoob.com/python3/python3-func-number-radians.html) | Convert angles to radians                                    |
+
+------
+
+
+
+## mathematical constant
+
+| constant | describe                                                     |
+| :------- | :----------------------------------------------------------- |
+| p        | The mathematical constant pi (pi, generally expressed in π)  |
+| e        | The mathematical constant e, e is the natural constant (natural constant). |
+
+
+
 # String
 
 Strings in Python are enclosed in single quotes `' `or double quotes` " `while special characters are escaped with a backslash `\` .
@@ -198,6 +266,93 @@ n P
 ```
 
 Unlike C strings, Python strings cannot be changed. Assigning a value to an index position, such as `word[0] = 'm' `will cause an error.
+
+
+
+## Python escape characters
+
+**Python escapes characters with backslash \** when special characters need to be used within characters . As shown in the following table:
+
+| escape character           | describe                                                     | example                                                      |
+| :------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| \ (at the end of the line) | continuation character                                       | `>>> print("line1 \ print ( "line1\ ...line2\ ...line3")) line1 line2 line3 >>>>>>  ` |
+| \\                         | backslash symbol                                             | `>>> print("\\") print ( "\\" ) \`                           |
+| \'                         | apostrophe                                                   | `>>> print('\'') print ( '\'' ) '' `                         |
+| \"                         | Double quotes                                                | `>>> print("\"") print ( "\"" ) ""`                          |
+| \a                         | ring the bell                                                | `>>> print("\a") print ( "\a" )`The computer beeps after execution. |
+| \b                         | Backspace                                                    | `>>> print("Hello \b World!") print ( "Hello \b World!" ) Hello World!Hello World ! ` |
+| \000                       | null                                                         | `>>> print("\000") print ( "\000" ) >>>>>>  `                |
+| \n                         | new line                                                     | `>>> print("\n") print ( "\n" )  >>>>>>`                     |
+| \v                         | vertical tab                                                 | `>>> print("Hello \v World!") print ( "Hello \v World!" ) hellohello        World!World ! >>>>>>` |
+| \t                         | horizontal tab                                               | `>>> print("Hello \t World!") print ( "Hello \t World!" ) Hello World!Hello World !     >>>>>>` |
+| \r                         | Press Enter to move the content behind **\r** to the beginning of the string, and replace the characters at the beginning one by one until the content behind **\r is completely replaced.** | `>>> print("Hello\rWorld!") print ( "Hello\rWorld!" ) World!World ! >>> print('google runoob taobao\r123456')>>> print ( 'google runoob taobao\r123456' )  123456 runoob taobao123456 runoob taobao ` |
+| \f                         | change page                                                  | `>>> print("Hello \f World!") print ( "Hello \f World!" ) hellohello        World!World ! >>>>>>  ` |
+| \yyy                       | Octal number, y stands for characters from 0 to 7, for example: \012 stands for newline. | `>>> print("\110\145\154\154\157\40\127\157\162\154\144\41") print ( "\110\145\154\154\157\40\127\157\162\154\144\41" ) Hello World!Hello World ! ` |
+| \xyy                       | Hexadecimal number, starting with \x, the character represented by y, for example: \x0a represents newline | `>>> print("\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64\x21") print ( "\x48\x65\x6c\x6c\x6f\x20\x57\x6f\x72\x6c\x64\x21" ) Hello World!Hello World ! ` |
+| \other                     | Other characters are output in normal format                 |                                                              |
+
+## string operators
+
+The value of instance variable a in the following table is the string "Hello", and the value of variable b is "Python":
+
+| operator | describe                                                     | example                                                      |
+| :------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| +        | string concatenation                                         | a + b output: HelloPython                                    |
+| *        | Repeat output string                                         | a*2 output result: HelloHello                                |
+| []       | Get characters in a string by index                          | a[1] output result **e**                                     |
+| [ : ]    | Intercept a part of the string, follow the principle of **left-closed-right-open** , str[0:2] does not contain the third character. | a[1:4] output result **ell**                                 |
+| in       | Membership operator - returns True if the given character is contained in the string | **'H' in a** outputs True                                    |
+| not in   | Membership operator - returns True if the given character is not contained in the string | **'M' not in a** output True                                 |
+| r/R      | Raw Strings - Raw Strings: All strings are used literally, without escaping special or unprintable characters. **Raw strings have almost the same syntax as normal strings, except that the letter r** (upper and lower case) is added before the first quotation mark in the string . | `print( r'\n' )( r '\n' )  print( R'\n' )print ( R '\n' )  ` |
+| %        | format string                                                | Please see the next section.                                 |
+
+## string formatting
+
+Python supports the output of formatted strings. Although this allows for very complex expressions, the most basic use is to insert a value into a string with the string format character %s.
+
+In Python, string formatting uses the same syntax as the sprintf function in C.
+
+## Example (Python 3.0+)
+
+```python
+\#!/usr/bin/python3 print ( " My name is %s and I am %d years old this year! " % ( ' Xiao Ming ' , 10 ) )
+```
+
+string formatting symbols:
+
+
+
+| symbol | describe                                                     |
+| :----- | :----------------------------------------------------------- |
+| %c     | Formatting characters and their ASCII codes                  |
+| %s     | format string                                                |
+| %d     | format integer                                               |
+| %u     | format unsigned integer                                      |
+| %o     | Format an unsigned octal number                              |
+| %x     | Format an unsigned hexadecimal number                        |
+| %X     | format unsigned hexadecimal number (uppercase)               |
+| %f     | Format floating point numbers, you can specify the precision after the decimal point |
+| %e     | Format floating point numbers in scientific notation         |
+| %E     | Same as %e, format floating point numbers in scientific notation |
+| %g     | Shorthand for %f and %e                                      |
+| %G     | Shorthand for %f and %E                                      |
+| %p     | format the address of a variable with a hexadecimal number   |
+
+Formatting operator auxiliary instructions:
+
+| symbol | Function                                                     |
+| :----- | :----------------------------------------------------------- |
+| *      | Define width or decimal point precision                      |
+| -      | for left alignment                                           |
+| +      | Display a plus sign ( + ) in front of positive numbers       |
+| <sp>   | display spaces before positive numbers                       |
+| #      | Display zero ('0') in front of octal numbers, '0x' or '0X' in front of hexadecimal numbers (depending on whether 'x' or 'X' is used) |
+| 0      | Displayed numbers are preceded by '0' instead of the default space |
+| %      | '%%' outputs a single '%'                                    |
+| (var)  | map variable (dictionary parameter)                          |
+| mn     | m is the minimum total width of the display, n is the number of digits after the decimal point (if available) |
+
+[Starting from Python2.6, a new format string function str.format()](https://www.runoob.com/python/att-string-format.html) has been added , which enhances the string formatting function.
 
 ## Notice: 
 
@@ -248,6 +403,83 @@ Boolean type features:
 ## Note:
 
 In Python, all non-zero numbers and non-empty strings, lists, tuples, and other data types are considered True, and only 0, empty strings, empty lists, empty tuples, etc. are considered False. Therefore, when performing Boolean type conversion, you need to pay attention to the authenticity of the data type.
+
+## f-string
+
+f-string is added after python3.6, it is called literal format string, and it is a new format string syntax.
+
+We used to use the percent sign (%) before:
+
+```python
+>>> name = 'Runoob'
+>>> 'Hello %s' % name
+'Hello Runoob'
+```
+
+**The f-string** format string starts with **f** , followed by a string. The expression in the string is wrapped in curly braces {}, which will replace the calculated value of the variable or expression. Examples are as follows:
+
+```python
+>>> name = 'Runoob'
+>>> f 'Hello {name}'  # substitute variable
+'Hello Runoob'
+>>> f '{1+2}'         # use expression
+'3'
+
+>>> w = { ' name' : 'Runoob' , 'url' : 'www.runoob.com' }
+>>> f '{w["name"]}: {w["url"]}'
+'Runoob: www.runoob.com '
+```
+
+
+
+## string built-in functions
+
+Python's commonly used built-in functions for strings are as follows:
+
+
+
+| serial number | Method and description                                       |
+| :------------ | :----------------------------------------------------------- |
+| 1             | [capitalize()](https://www.runoob.com/python3/python3-string-capitalize.html) converts the first character of a string to uppercase |
+| 2             | [center(width, fillchar)](https://www.runoob.com/python3/python3-string-center.html)Returns a string with the specified width width centered, fillchar is the filled character, and the default is a space. |
+| 3             | [count(str, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-count.html) Returns the number of occurrences of str in the string, if beg or end is specified, returns the number of occurrences of str within the specified range |
+| 4             | [bytes.decode(encoding="utf-8", errors="strict")](https://www.runoob.com/python3/python3-string-decode.html) There is no decode method in Python3, but we can use the decode() method of the bytes object to decode the given bytes object, which can be encoded and returned by str.encode(). |
+| 5             | [encode(encoding='UTF-8', errors='strict')](https://www.runoob.com/python3/python3-string-encode.html) Encode the string in the encoding format specified by encoding. If an error occurs, a ValueError exception will be reported by default, unless errors specify 'ignore' or 'replace' |
+| 6             | [endswith(suffix, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-endswith.html) checks whether the string ends with suffix, if beg or end is specified, checks whether the specified range ends with suffix, if yes, returns True, otherwise returns False. |
+| 7             | [expandtabs(tabsize=8)](https://www.runoob.com/python3/python3-string-expandtabs.html) Convert the tab symbols in the string string into spaces, and the default number of spaces for tab symbols is 8. |
+| 8             | [find(str, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-find.html) Check whether str is included in the string, if the specified range beg and end, check whether it is included in the specified range, if it is included, return the index value of the beginning, otherwise return -1 |
+| 9             | [index(str, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-index.html) Same as the find() method, except that an exception will be reported if str is not in the string. |
+| 10            | [isalnum()](https://www.runoob.com/python3/python3-string-isalnum.html) Returns True if the string has at least one character and all characters are letters or numbers, otherwise returns False |
+| 11            | [isalpha()](https://www.runoob.com/python3/python3-string-isalpha.html) Return True if the string has at least one character and all characters are letters or Chinese characters, otherwise return False |
+| 12            | [isdigit()](https://www.runoob.com/python3/python3-string-isdigit.html) Returns True if the string contains only numbers, otherwise returns False.. |
+| 13            | [islower()](https://www.runoob.com/python3/python3-string-islower.html) Returns True if the string contains at least one case-sensitive character and all of those (case-sensitive) characters are lowercase, otherwise returns False |
+| 14            | [isnumeric()](https://www.runoob.com/python3/python3-string-isnumeric.html) Returns True if the string contains only numeric characters, otherwise returns False |
+| 15            | [isspace()](https://www.runoob.com/python3/python3-string-isspace.html) Returns True if the string contains only whitespace, otherwise returns False. |
+| 16            | [istitle()](https://www.runoob.com/python3/python3-string-istitle.html) Returns True if the string is titled (see title()), otherwise returns False |
+| 17            | [isupper()](https://www.runoob.com/python3/python3-string-isupper.html) Returns True if the string contains at least one case-sensitive character and all of those (case-sensitive) characters are uppercase, otherwise returns False |
+| 18            | [join(seq)](https://www.runoob.com/python3/python3-string-join.html) Merge all elements (string representations) in seq into a new string with the specified string as the delimiter |
+| 19            | [len(string)](https://www.runoob.com/python3/python3-string-len.html) Returns the length of the string |
+| 20            | [ljust(width[, fillchar\])](https://www.runoob.com/python3/python3-string-ljust.html) Return a new string with the original string left-aligned and padded to length width with fillchar. fillchar is a space by default. |
+| twenty one    | [lower()](https://www.runoob.com/python3/python3-string-lower.html) Converts all uppercase characters in a string to lowercase. |
+| twenty two    | [lstrip()](https://www.runoob.com/python3/python3-string-lstrip.html) Truncates spaces or specified characters from the left of a string. |
+| twenty three  | [maketrans()](https://www.runoob.com/python3/python3-string-maketrans.html) Create a character mapping conversion table. For the simplest calling method that accepts two parameters, the first parameter is a string representing the character to be converted, and the second parameter is also a string representing the conversion target. |
+| twenty four   | [max(str)](https://www.runoob.com/python3/python3-string-max.html) Returns the largest letter in the string str. |
+| 25            | [min(str)](https://www.runoob.com/python3/python3-string-min.html) Returns the smallest letter in the string str. |
+| 26            | [replace(old, new [, max\])](https://www.runoob.com/python3/python3-string-replace.html) Replace old in the string with new. If max is specified, the replacement will not exceed max times. |
+| 27            | [rfind(str, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-rfind.html) Similar to the find() function, but searches from the right. |
+| 28            | [rindex(str, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-rindex.html) Similar to index(), but starts from the right. |
+| 29            | [rjust(width,[, fillchar\])](https://www.runoob.com/python3/python3-string-rjust.html) Returns a new string with the original string right-aligned and filled to length width using fillchar (default space) |
+| 30            | [rstrip()](https://www.runoob.com/python3/python3-string-rstrip.html) Removes spaces or specified characters from the end of a string. |
+| 31            | [split(str="", num=string.count(str))](https://www.runoob.com/python3/python3-string-split.html) Use str as the delimiter to intercept the string, if num has a specified value, only num+1 substrings will be intercepted |
+| 32            | [splitlines ([keepends\])](https://www.runoob.com/python3/python3-string-splitlines.html) Separated by line ('\r', '\r\n', \n'), return a list containing each line as an element, if the parameter keepends is False, do not include newline characters, if True, keep newline characters. |
+| 33            | [startswith(substr, beg=0, end=len(string))](https://www.runoob.com/python3/python3-string-startswith.html) Checks if the string starts with the specified substring substr, returns True if yes, otherwise returns False. If beg and end specify values, check within the specified range. |
+| 34            | [strip([chars\])](https://www.runoob.com/python3/python3-string-strip.html) Perform lstrip() and rstrip() on strings |
+| 35            | [swapcase()](https://www.runoob.com/python3/python3-string-swapcase.html) Convert uppercase to lowercase in a string, and convert lowercase to uppercase |
+| 36            | [title()](https://www.runoob.com/python3/python3-string-title.html) Returns a "titled" string, that is, all words start with uppercase and the rest are lowercase (see istitle()) |
+| 37            | [translate(table, deletechars="")](https://www.runoob.com/python3/python3-string-translate.html) Convert the characters of string according to the table given by table (contains 256 characters), and put the characters to be filtered out into the deletechars parameter |
+| 38            | [upper()](https://www.runoob.com/python3/python3-string-upper.html) Convert lowercase letters in a string to uppercase |
+| 39            | [zfill (width)](https://www.runoob.com/python3/python3-string-zfill.html) Returns a string of length width, the original string is right-aligned, and the front is filled with 0 |
+| 40            | [isdecimal()](https://www.runoob.com/python3/python3-string-isdecimal.html) Checks if the string contains only decimal characters, returns true if yes, false otherwise. |
 
 
 
