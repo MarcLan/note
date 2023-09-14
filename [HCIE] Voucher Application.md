@@ -7,7 +7,7 @@
 - Fill in **Basic Information**
 
   ```shell
-  Application Name = "HCIE - ***""
+  Application Name = "HCIE - ***"
   Scenario = "Self-applying"
   ```
 
