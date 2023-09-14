@@ -1,6 +1,6 @@
 # HCIE Voucher Application
 
-- [Click here to go to **Huawei Talent**](https://e.huawei.com/en/talent/#/personal/hw-emploees/applay-vouchers?couponType=VOUCHER&usageScenes=HW)![image-20230914101912676](https://raw.githubusercontent.com/MarcLan/pic/main/image-20230914101912676.png)
+- Click [**Huawei Talent**](https://e.huawei.com/en/talent/#/personal/hw-emploees/applay-vouchers?couponType=VOUCHER&usageScenes=HW)![image-20230914101912676](https://raw.githubusercontent.com/MarcLan/pic/main/image-20230914101912676.png) to go to **Voucher Application** page
 
   
 
